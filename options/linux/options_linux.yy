@@ -1,5 +1,5 @@
 {
-  "option_linux_display_name": "GM-Particle : Example Project",
+  "option_linux_display_name": "Sprinkle : Example Project",
   "option_linux_version": "0.1.0",
   "option_linux_maintainer_email": "",
   "option_linux_homepage": "http://www.yoyogames.com",

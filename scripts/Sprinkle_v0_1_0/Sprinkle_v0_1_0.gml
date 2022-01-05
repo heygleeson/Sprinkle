@@ -1,8 +1,9 @@
 /*
 
-	GM-Particle by @heygleeson.
+	🍩 Sprinkle by @heygleeson
 	
 	v0.1.0 | 05-01-2022
+	https://https://github.com/heygleeson/sprinkle
 	
 	A wrapper for GameMaker's particle functions.
 	Utilises GML 2.3+ syntax to utilise 'method-chaining', allowing for code to be written faster and be more legible.

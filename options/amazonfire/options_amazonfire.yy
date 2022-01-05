@@ -1,6 +1,6 @@
 {
   "option_amazonfire_sync_android": false,
-  "option_amazonfire_display_name": "GM-Particle : Example Project",
+  "option_amazonfire_display_name": "Sprinkle : Example Project",
   "option_amazonfire_version": "0.1.0",
   "option_amazonfire_tools_from_version": false,
   "option_amazonfire_build_tools": "",

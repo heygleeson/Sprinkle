@@ -1,5 +1,5 @@
 {
-  "option_ios_display_name": "GM-Particle : Example Project",
+  "option_ios_display_name": "Sprinkle : Example Project",
   "option_ios_bundle_name": "com.company.game",
   "option_ios_version": "0.1.0",
   "option_ios_output_dir": "~/gamemakerstudio2",

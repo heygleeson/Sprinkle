@@ -5,7 +5,7 @@
 
 if (mouse_check_button(mb_left)) {
 	// Move the emitter region
-	emitter.region(mouse_x-posX-32, mouse_y-posY-32, mouse_x-posX+32, mouse_y-posY+32);
+	emitter.region(mouse_x-posX-64, mouse_y-posY-64, mouse_x-posX+64, mouse_y-posY+64,ps_shape_ellipse);
 }
 
 if (keyboard_check_pressed(vk_shift)) {
@@ -31,9 +31,9 @@ if (keyboard_check_released(vk_enter)) {
 
 // Change ParticleType Property
 if (keyboard_check_pressed(ord("A"))) {
-	particleTypes.fire.orientation(0, 360, -15, 1);	
+	particleTypes.fire.orientation(0, 360, -1.5, 1);	
 }
 
 if (keyboard_check_released(ord("A"))) {
-	particleTypes.fire.orientation(0, 360, 15, 1);	
+	particleTypes.fire.orientation(0, 360, 1.5, 1);	
 }

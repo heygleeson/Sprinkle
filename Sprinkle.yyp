@@ -1,8 +1,8 @@
 {
   "resources": [
-    {"id":{"name":"GMParticle","path":"scripts/GMParticle/GMParticle.yy",},"order":0,},
-    {"id":{"name":"oGMParticleTest","path":"objects/oGMParticleTest/oGMParticleTest.yy",},"order":1,},
-    {"id":{"name":"rmGMParticleTest","path":"rooms/rmGMParticleTest/rmGMParticleTest.yy",},"order":2,},
+    {"id":{"name":"Sprinkle_v0_1_0","path":"scripts/Sprinkle_v0_1_0/Sprinkle_v0_1_0.yy",},"order":0,},
+    {"id":{"name":"oSprinkleTest","path":"objects/oSprinkleTest/oSprinkleTest.yy",},"order":1,},
+    {"id":{"name":"rmSprinkleTest","path":"rooms/rmSprinkleTest/rmSprinkleTest.yy",},"order":2,},
   ],
   "Options": [
     {"name":"Amazon Fire","path":"options/amazonfire/options_amazonfire.yy",},
@@ -24,7 +24,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"rmGMParticleTest","path":"rooms/rmGMParticleTest/rmGMParticleTest.yy",},},
+    {"roomId":{"name":"rmSprinkleTest","path":"rooms/rmSprinkleTest/rmSprinkleTest.yy",},},
   ],
   "Folders": [],
   "AudioGroups": [
@@ -38,7 +38,7 @@
     "IDEVersion": "2.3.7.606",
   },
   "resourceVersion": "1.4",
-  "name": "GM-Particle",
+  "name": "Sprinkle",
   "tags": [],
   "resourceType": "GMProject",
 }

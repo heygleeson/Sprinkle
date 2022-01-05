@@ -1,5 +1,5 @@
 {
-  "option_html5_browser_title": "GM-Particle : Example Project",
+  "option_html5_browser_title": "Sprinkle : Example Project",
   "option_html5_version": "0.1.0.0",
   "option_html5_foldername": "html5game",
   "option_html5_outputname": "index.html",

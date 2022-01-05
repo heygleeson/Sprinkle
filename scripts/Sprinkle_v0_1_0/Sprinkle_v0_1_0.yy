@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "GM-Particle",
-    "path": "GM-Particle.yyp",
+    "name": "Sprinkle",
+    "path": "Sprinkle.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "GMParticle",
+  "name": "Sprinkle_v0_1_0",
   "tags": [],
   "resourceType": "GMScript",
 }

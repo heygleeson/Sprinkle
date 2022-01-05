@@ -1,5 +1,5 @@
 {
-  "option_mac_display_name": "GM-Particle : Example Project",
+  "option_mac_display_name": "Sprinkle : Example Project",
   "option_mac_app_id": "com.company.game",
   "option_mac_version": "0.1.0",
   "option_mac_output_dir": "~/gamemakerstudio2",

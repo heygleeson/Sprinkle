@@ -1,6 +1,6 @@
 {
   "option_android_sync_amazon": false,
-  "option_android_display_name": "GM-Particle : Example Project",
+  "option_android_display_name": "Sprinkle : Example Project",
   "option_android_version": "0.1.0",
   "option_android_tools_from_version": false,
   "option_android_build_tools": "",
