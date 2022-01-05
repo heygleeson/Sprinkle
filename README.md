@@ -6,8 +6,6 @@ A wrapper for GameMaker's native particle functions.
 
 Adds syntactic sugar by using **GML 2.3+ syntax** to implement **'method-chaining'**, allowing code to be written faster and be more legible.
 
----
-
 ## Comparison
 
 Writing native functions to utilise GameMaker's particle system looks like this:
@@ -90,6 +88,8 @@ if (keyboard_check_released(vk_enter)) {
 
 Each constructor contains a single variable, `id`, which stores the relevant `index` that is used by the native particle functions.
 
+---
+
 ### Notes
 
 (v0.1.0 / GMS 2.3.7.606) GameMaker has a compiler error where **in-built variables** cannot be re-declared as `static` in constructors:
@@ -98,8 +98,3 @@ Each constructor contains a single variable, `id`, which stores the relevant `in
 - `gravity`
 
 These methods are therefore currently 'non-static'. This does not significantly impact the performance of the library, just addressing the inconsistency here.
-
----
-
-- [Report a bug]()
-- [Submit a Feature Request]()
