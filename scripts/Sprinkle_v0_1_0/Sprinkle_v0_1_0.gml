@@ -283,14 +283,7 @@ function ParticleType() constructor {
 	/// @arg	colour1					first colour value
 	/// @arg	[colour2]				second colour value (middle/end)
 	/// @arg	[colour3]				third colour value (end)
-	static colour = function() {
-		switch(argument_count) {
-			case 1: part_type_colour1(id,argument[0]); break;
-			case 2: part_type_colour2(id,argument[0],argument[1]); break;
-			case 3: part_type_colour3(id,argument[0],argument[1],argument[2]); break;
-		}
-		return self;
-	}	
+	static colour = color;
 
 	/// @func	setDirection(min, max, increase, wiggle)
 	/// @desc	Set the movement direction of the ParticleType.
