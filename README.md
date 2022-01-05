@@ -57,7 +57,8 @@ Refer to the [Wiki]() to see the full list of methods.
 
 Basic setup looks like this:
 
-```gml
+**Create Event**
+```js
 /// Create Event
 // Define ParticleTypes
 partTypes = {
@@ -75,18 +76,17 @@ partEmit = new ParticleEmitter(partSystem.id).stream(partTypes.fire.id,20);
 
 // Example: Basic Toggle
 active = true;
+```
 
+**Step Event**
+```js
 /// Step Event
-
 // Example: Toggle AutoUpdate using Spacebar
 if (keyboard_check_released(vk_enter)) {
     active = !active;
     partSystem.autoUpdate(active);
 }
-
 ```
-
-Each constructor contains a single variable, `id`, which stores the relevant `index` that is used by the native particle functions.
 
 ---
 
