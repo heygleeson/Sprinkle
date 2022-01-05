@@ -31,9 +31,9 @@ if (keyboard_check_released(vk_enter)) {
 
 // Change ParticleType Property
 if (keyboard_check_pressed(ord("A"))) {
-	particleTypes.fire.orientation(0, 360, -1.5, 1);	
+	particleTypes.sprinkle.orientation(0, 360, -1.5, 1);	
 }
 
 if (keyboard_check_released(ord("A"))) {
-	particleTypes.fire.orientation(0, 360, 1.5, 1);	
+	particleTypes.sprinkle.orientation(0, 360, 1.5, 1);	
 }

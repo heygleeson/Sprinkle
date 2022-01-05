@@ -186,7 +186,7 @@ function ParticleEmitter(_partSystem = new ParticleSystem().id) constructor {
 	}
 
 	/// @func	region(x1, y1, x2, y2, shape, distribution)
-	/// @desc	Define the position/shape/distrubution of the current emitter.
+	/// @desc	Set the region/shape/distribution of the current emitter.
 	/// @arg	{real} x1				left position
 	/// @arg	{real} y1				top position
 	/// @arg	{real} x2				right position
@@ -198,6 +198,14 @@ function ParticleEmitter(_partSystem = new ParticleSystem().id) constructor {
 		return self;
 	}
 
+	/// @func	position(x, y)
+	/// @desc	Set the emitter region to be a singular point.
+	/// @arg	{real} x				x position
+	/// @arg	{real} y				y position
+	static position = function(_x,_y) {
+		part_emitter_region(ps,id,_x,_x,_y,_y,ps_shape_rectangle,ps_distr_linear);
+		return self;
+	}
 	/// @func	stream(type, num)
 	/// @desc	Set up a 'stream' where particles are created every step on this emitter.
 	/// @arg	{int} type				ParticleType id

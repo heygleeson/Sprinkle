@@ -1,15 +1,14 @@
-# GM-Particle
+# 🍩 Sprinkle
 
 **v0.1.0 | 05-01-2022**
 
-A wrapper for GameMaker's particle functions.
-Utilises GML 2.3+ syntax to utilise 'method-chaining', allowing for code to be written faster and be more legible.
+A wrapper for GameMaker's native particle functions.
 
----
+Adds syntactic sugar by using **GML 2.3+ syntax** to implement **'method-chaining'**, allowing code to be written faster and be more legible.
 
 ## Comparison
 
-Writing native code to utilise GameMaker's particle system looks like this:
+Writing native functions to utilise GameMaker's particle system looks like this:
 
 ```gml
 global.p1 = part_type_create();
@@ -28,30 +27,31 @@ part_type_life(global.p1, 15, 60);
 
 This wrapper/library allows you to write the same code like this:
 
-```gml
+```js
 global.p1 = new ParticleType()
-			.shape(pt_shape_pixel)
-			.size(1,3)
-			.scale(1,1)
-			.color(c_white)
-			.alpha(1,0)
-			.speed(2,4)
-			.direction(0,180)
-			.gravity(0.20, 270)
-			.orientation(0, 0, 0, 0, 1)
-			.blend(true)
-			.life(15, 60);
-
+            .shape(pt_shape_pixel)
+            .size(1,3)
+            .scale(1,1)
+            .color(c_white)
+            .alpha(1,0)
+            .speed(2,4)
+            .direction(0,180)
+            .gravity(0.20, 270)
+            .orientation(0, 0, 0, 0, 1)
+            .blend(true)
+            .life(15, 60);
 ```
 
 ## Features
 
-This library covers:
-- **ParticleSystem()**s
-- **ParticleEmitter()**s
-- **ParticleType()**s
+This library covers all the native functions (including extensive JSDoc documentation) for:
+- ParticleSystems
+- ParticleEmitters
+- ParticleTypes
 
-**PhysicsParticles** are currently *not yet supported*.
+Refer to the [Wiki]() to see the full list of methods.
+
+- PhysicsParticles *are not yet supported*
 
 ## Usage
 
@@ -59,36 +59,42 @@ Basic setup looks like this:
 
 ```gml
 /// Create Event
+// Define ParticleTypes
+partTypes = {
+    fire : new ParticleType()
+        .alpha(0.6, 0.0),
+        .setColor(c_yellow,c _red),
+        .life(50, 60),
+        // (etc.)
+    // (etc.)
+}
 
-	// Define ParticleTypes
-	partTypes = {
-		fire : new ParticleType()
-				.alpha(0.6, 0.0),
-				.setColor(c_yellow,c _red),
-				.life(50, 60),
-				// (etc.)
-		// (etc.)
-	}
+// Create Particle System and Emitter
+partSystem = new ParticleSystem();
+partEmit = new ParticleEmitter(partSystem.id).stream(partTypes.fire.id,20);
 
-	// Create Particle System and Emitter
-	partSystem = new ParticleSystem();
-	partEmit = new ParticleEmitter(partSystem.id).stream(partTypes.fire.id,20);
+// Example: Basic Toggle
+active = true;
 
 /// Step Event
 
-	
+// Example: Toggle AutoUpdate using Spacebar
+if (keyboard_check_released(vk_enter)) {
+    active = !active;
+    partSystem.autoUpdate(active);
+}
 
 ```
 
-Each constructor (e.g. `ParticleSystem()`) contains a single variable, `id`, which stores the relevant index that is used by GameMaker's particle functions, as well as static methods that cover all of the native functions that are used for particles.
+Each constructor contains a single variable, `id`, which stores the relevant `index` that is used by the native particle functions.
 
-## Notes
+---
 
-(v0.1.0/GMS 2.3.7.606) GML has a few **in-built variables** that currently cannot be redeclared as `static` in constructors:
+### Notes
+
+(v0.1.0 / GMS 2.3.7.606) GameMaker has a compiler error where **in-built variables** cannot be re-declared as `static` in constructors:
 - `speed`
 - `direction`
 - `gravity`
+
 These methods are therefore currently 'non-static'. This does not significantly impact the performance of the library, just addressing the inconsistency here.
-
-
-- Refer to the [Wiki](...) to see the full list.

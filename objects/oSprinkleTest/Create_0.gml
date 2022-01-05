@@ -2,29 +2,31 @@
 
 // Define Particle Types
 particleTypes = {
+	dust		: new ParticleType()
+				.color(c_gray)
+				.life(20,20)
+				.alpha(0.2,0.0)
+				.shape(pt_shape_smoke)
+				.size(.1,.3,-0.01,.1)
+				.speed(.6, .9, -0.01, 0.1)
+				.direction(0, 360)
+				.orientation(0, 360, 5),
+				
 	sprinkle	: new ParticleType()
 				.alpha(0.5, 0.4, 0.1)
 				.blend(true)
 				.colour(c_fuchsia, c_aqua, c_purple)
 				.shape(pt_shape_line)
-				.life(90, 120)
 				.speed(.6, .9, -0.01, 0.1)
 				.size(.2, .3, -0.001)
 				.direction(0, 360)
 				.orientation(0, 360, 5),
-	smoke	: new ParticleType()
-				.alpha(0.0, 0.5, 0.0)
-				.shape(pt_shape_cloud)
-				.colour(c_dkgray, c_black)
-				.life(10, 20)
-				.speed(0.4, 0.6, 0.01, 0)
-				.size(0.2, 0.30, -0.01, 0)
-				.direction(80, 100)
-				.gravity(0.1, 90),
 }
 
-// Stream 'smoke' on every 'sprinkle' particle.
-particleTypes.sprinkle.death(particleTypes.smoke.id,3);
+// Using ParticleType functions that depend on other ParticleTypes to already be generated.
+with (particleTypes) {
+	sprinkle.death(dust.id,1);	
+}
 
 // Create Particle System
 partSystem = new ParticleSystem(true,true).position(room_width * .5, room_height * .5);
