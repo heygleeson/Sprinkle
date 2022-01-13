@@ -6,6 +6,9 @@ A wrapper for GameMaker's native particle functions.
 
 Adds syntactic sugar by using **GML 2.3+ syntax** to implement **'method-chaining'**, allowing code to be written faster and be more legible.
 
+[Download the latest release](https://github.com/heygleeson/Sprinkle/releases)
+[Read the Wiki](https://github.com/heygleeson/Sprinkle/wiki)
+
 ## Comparison
 
 Writing native functions to utilise GameMaker's particle system looks like this:
@@ -49,7 +52,7 @@ This library covers all the native functions (including extensive JSDoc document
 - ParticleEmitters
 - ParticleTypes
 
-Refer to the [Wiki]() to see the full list of methods.
+Refer to the [Wiki](https://github.com/heygleeson/Sprinkle/wiki) to see the full list of methods.
 
 - PhysicsParticles *are not yet supported*
 
